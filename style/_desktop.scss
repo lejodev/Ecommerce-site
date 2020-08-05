@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+.header {
+    padding: 1.7vh 3vw;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(241, 227, 25);
+    .logo {
+        border-bottom: 2px solid #234;
+        border-top: 2px solid #234;
+        font-size: 1.7rem;
+    }
+    nav {
+        display: inherit;
+        align-items: center;
+        ul {
+            display: inherit;
+            list-style: none;
+            li {
+                padding: 0 2vw;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+            }
+        }
+        .cart {
+            display: flex;
+            align-items: center;
+            position: relative;
+            .pop-snippet {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.7vw;
+                height: 1.7vw;
+                margin-left: 2vw;
+                background-color: steelblue;
+                position: absolute;
+                border-radius: 50%;
+                display: none;
+            }
+        }
+    }
+}
+.main {
+    .intro-img {
+        width: 100%;
+        height: 80vh;
+        background-image: url("/assets/images/shirts.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1vh;
+        .producto {
+            width: 100%;
+            height: 50vh;
+            background-color: silver;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            grid-template-areas:
+                "img img"
+                "img img"
+                "img img"
+                "img img"
+                "img img"
+                "prodName prodName"
+                "price price"
+                "carrito carrito";
+            .imagen {
+                grid-area: img;
+                background-color: red;
+            }
+            .nombre {
+                grid-area: prodName;
+                background-color: steelblue;
+            }
+            .valor {
+                grid-area: price;
+                background-color: seagreen;
+            }
+            .add-carrito {
+                grid-area: carrito;
+                background-color: royalblue;
+            }
+        }
+    }
+}

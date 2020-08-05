@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+}
+
+.header {
+  padding: 1.7vh 3vw;
+  border-bottom: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1e319;
+}
+
+.header .logo {
+  border-bottom: 2px solid #234;
+  border-top: 2px solid #234;
+  font-size: 1.7rem;
+}
+
+.header nav {
+  display: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header nav ul {
+  display: inherit;
+  list-style: none;
+}
+
+.header nav ul li {
+  padding: 0 2vw;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.header nav .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.header nav .cart .pop-snippet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1.7vw;
+  height: 1.7vw;
+  margin-left: 2vw;
+  background-color: steelblue;
+  position: absolute;
+  border-radius: 50%;
+  display: none;
+}
+
+.main .intro-img {
+  width: 100%;
+  height: 80vh;
+  background-image: url("/assets/images/shirts.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.main #gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  gap: 1vh;
+}
+
+.main #gallery .producto {
+  width: 100%;
+  height: 50vh;
+  background-color: silver;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
+      grid-template-areas: "img img" "img img" "img img" "img img" "img img" "prodName prodName" "price price" "carrito carrito";
+}
+
+.main #gallery .producto .imagen {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: img;
+  background-color: red;
+}
+
+.main #gallery .producto .nombre {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: prodName;
+  background-color: steelblue;
+}
+
+.main #gallery .producto .valor {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: price;
+  background-color: seagreen;
+}
+
+.main #gallery .producto .add-carrito {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: carrito;
+  background-color: royalblue;
+}
+/*# sourceMappingURL=style.css.map */
